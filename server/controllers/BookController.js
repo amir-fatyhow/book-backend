@@ -9,7 +9,7 @@ class BookController {
             const {name, author, description, price, genreId} = req.body
             const {image} = req.files
             let fileName = uuid.v4() + ".jpg"
-            image.mv(path.resolve(__dirname, "..", "static", fileName))
+            await image.mv(path.resolve(__dirname, "..", "static", fileName))
 
             const book = await Book.create({name, author, description, price, image: fileName, genreId})
             return res.json(book)
@@ -19,11 +19,23 @@ class BookController {
     }
 
     async getById(req, res) {
-
+        const {id} = req.params
+        const book = await Book.findOne({where: {id}})
+        return res.json(book)
     }
 
     async getAll(req, res) {
-
+        let {genreId, limit, page} = req.query
+        page = page || 1
+        limit = limit || 9
+        let offset = page * limit - limit
+        let books
+        if (genreId) {
+            books = await Book.findAndCountAll({where:{genreId}, limit, offset})
+            return res.json(books)
+        }
+        books = await Book.findAndCountAll({limit, offset})
+        return res.json(books)
     }
 }
 

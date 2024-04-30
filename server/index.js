@@ -14,26 +14,31 @@ const fileUpload = require("express-fileupload")
 const userController = require("./controllers/UserController")
 const bookController = require("./controllers/BookController")
 const genreController = require("./controllers/GenreController")
+const authMiddleware = require("./middleware/authMiddleware")
+const checkRole = require("./middleware/checkRoleMiddleware")
+
 const errorHandler = require("./middleware/ErrorHandlingMiddleware")
+const path = require("path")
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.resolve(__dirname, "static")))
 app.use(fileUpload({}))
 
 // user
 userRouter.post("/registration", userController.registration)
 userRouter.post("/login", userController.login)
-userRouter.get("/auth", userController.check)
+userRouter.get("/auth", authMiddleware, userController.check)
 
 // book
-bookRouter.post("/", bookController.create)
+bookRouter.post("/", checkRole("ADMIN"), bookController.create)
 bookRouter.get("/", bookController.getAll)
 bookRouter.get("/:id", bookController.getById)
 
 // genre
-genreRouter.post("/", genreController.create)
+genreRouter.post("/", checkRole("ADMIN"), genreController.create)
 genreRouter.get("/", genreController.getAll)
 
 app.use("/api/user", userRouter)
