@@ -1,0 +1,43 @@
+.genreBar__container {
+    margin-top: 100px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.genreBar__icon {
+    width: 20px;
+}
+
+.genreBar__listItem {
+    display: flex;
+    gap: 10px;
+
+    margin: 0 0 4px 20px;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    padding: 8px 10px;
+    border-radius: 3px;
+
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+.genreBar__listItem-active {
+    background-image: linear-gradient(to right, #6253e1,  #b345f2);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    color: white;
+}
+
+.genreBar__name {
+    color: black;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.genreBar__name-active {
+    color: white;
+}

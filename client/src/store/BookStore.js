@@ -36,7 +36,35 @@ export default class BookStore {
                 image: "https://w.forfun.com/fetch/59/59c8750681364de90b00e6081342c856.jpeg",
                 genre_id: 1
             },
+            {
+                id: 4,
+                name: "Евгений Онегин 4",
+                author: "А.С. Пушкин",
+                description: "Роман в стихах",
+                price: 199,
+                image: "https://w.forfun.com/fetch/59/59c8750681364de90b00e6081342c856.jpeg",
+                genre_id: 1
+            },
+            {
+                id: 5,
+                name: "Евгений Онегин 5",
+                author: "А.С. Пушкин",
+                description: "Роман в стихах",
+                price: 199,
+                image: "https://w.forfun.com/fetch/59/59c8750681364de90b00e6081342c856.jpeg",
+                genre_id: 1
+            },
+            {
+                id: 6,
+                name: "Евгений Онегин 6",
+                author: "А.С. Пушкин",
+                description: "Роман в стихах",
+                price: 199,
+                image: "https://w.forfun.com/fetch/59/59c8750681364de90b00e6081342c856.jpeg",
+                genre_id: 1
+            },
         ]
+        this._selectedGenre = {}
         makeAutoObservable(this)
     }
 
@@ -48,11 +76,19 @@ export default class BookStore {
         this._books = books
     }
 
+    setSelectedGenre(genre) {
+        this._selectedGenre = genre
+    }
+
     get genre() {
         return this._genre
     }
 
     get books() {
         return this._books
+    }
+
+    get selectedGenre() {
+        return this._selectedGenre
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Subscription.css'
+import {NavLink} from "react-router-dom";
 
 const Mail = () => {
     return (
@@ -11,8 +12,9 @@ const Mail = () => {
                 <p className="subscription__paragraph">Не пропустите!</p>
             </div>
             <div className="subscription__button">
-                <input type="email" className="subscription__form__field" placeholder="Ваш E-Mail"/>
-                <button className="subscription__button-hover subscription__button-color-7">Подписаться</button>
+                <NavLink to="/registration">
+                    <button className="subscription__button-hover subscription__button-color-7">Подписаться</button>
+                </NavLink>
             </div>
         </div>
     );

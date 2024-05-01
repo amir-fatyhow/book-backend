@@ -1,16 +1,20 @@
 import React from 'react';
 import {Col, Container, Row} from "react-bootstrap";
-import GenreBar from "../components/GenreBar";
+import GenreBar from "../components/genreBar/GenreBar";
+import BookList from "../components/bookList/BookList";
+import "./Shop.css"
+import ScrollToTop from "react-scroll-to-top";
 
 const Shop = () => {
     return (
-        <Container>
+        <Container className="container-sm shop__container">
+            <ScrollToTop smooth />
             <Row>
-                <Col md={3}>
+                <Col md={2}>
                     <GenreBar/>
                 </Col>
-                <Col md={9}>
-
+                <Col md={10}>
+                    <BookList />
                 </Col>
             </Row>
         </Container>

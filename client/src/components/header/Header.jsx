@@ -28,12 +28,9 @@ const Header = observer(() => {
                 <div className="header__text">
                     <h1 className="header__text-title">VBOOK</h1>
                     <p className="header__text-paragraph">Смотри книги в любое время в любом месте!</p>
-                    {user.isAuth ?  <div className="header__button">
-                        <button className="header__button-hover header__button-color-7" onClick={() => user.setIsAuth(false)}>Войти</button>
-                    </div> :
-                    <div className="header__button">
+                    <NavLink to="/registration">
                         <button className="header__button-hover header__button-color-7" onClick={() => user.setIsAuth(true)}>Зарегистрироваться</button>
-                    </div>}
+                    </NavLink>
                 </div>
             </div>
         </header>

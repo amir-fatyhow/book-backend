@@ -1,0 +1,135 @@
+.bookItem__container {
+    margin-top: 50px;
+}
+
+.recommendation__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.recommendation__author {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.recommendation__book {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.recommendation__button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+
+    color: white;
+    text-decoration: none;
+    padding: 1.2em 2.8em calc(.8em + 4px);
+    border: none;
+    border-radius: 3px;
+    background: rgb(19, 19, 19);
+    box-shadow: 0 -3px rgb(19, 19, 19) inset;
+    transition: 0.2s;
+}
+
+.recommendation__button:hover {
+    cursor: pointer;
+    background: rgb(19, 19, 19);
+}
+
+.recommendation__button:active {
+    background: rgb(19, 19, 19);
+    box-shadow: 0 3px rgb(19, 19, 19) inset;
+}
+
+.recommendation__flip__card__container {
+    width: 270px;
+    height: 360px;
+
+    perspective: 1000px;
+}
+
+.recommendation__flip__card {
+    width: inherit;
+    height: inherit;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .6s .1s;
+}
+
+.recommendation__flip__card__container:hover .recommendation__flip__card,
+.recommendation__flip__card__container:focus-within .recommendation__flip__card {
+    transform: rotateY(180deg);
+}
+
+.recommendation__card__front,
+.recommendation__card__back {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+
+    background: #25022a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommendation__card__front {
+    transform: rotateY(4deg);
+    z-index: 2;
+}
+
+.recommendation__card__back {
+    display: flex;
+    align-items: start;
+    background-color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.recommendation__back__side__text {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.recommendation__card__front__wrapper {
+    z-index: -1;
+}
+
+.recommendation__card__front__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.recommendation__card__front__image {
+    height: 100%;
+    border-radius: 2px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+

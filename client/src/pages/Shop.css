@@ -1,0 +1,5 @@
+.shop__container {
+    min-width: 100%;
+    background-color: rgba(211, 211, 211, 0.1);
+    padding-bottom: 50px;
+}
