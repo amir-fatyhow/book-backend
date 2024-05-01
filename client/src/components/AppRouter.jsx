@@ -5,6 +5,12 @@ import Auth from "../pages/Auth";
 import BookPage from "../pages/BookPage";
 import Basket from "../pages/Basket";
 import {Context} from "../index";
+import Header from "./header/Header";
+import Genres from "./genres/Genres";
+import Recommendations from "./recommendations/Recommendations";
+import Description from "./description/Description";
+import Mail from "./subscription/Subscription";
+import Contacts from "./contacts/Contacts";
 
 const AppRouter = () => {
     const {user} = useContext(Context)
@@ -15,7 +21,17 @@ const AppRouter = () => {
             {!user.isAuth && <Route path="/registration" element={<Auth/>}/>}
             {!user.isAuth && <Route path="/book/:id" element={<BookPage/>}/>}
             {user.isAuth && <Route path="/basket" element={<Basket/>}/>}
-            <Route path="*" element={<Navigate to="/shop" replace />} />
+
+            {!user.isAuth && <Route path="/" element=
+                {<>
+                <Header />
+                <Genres />
+                <Recommendations />
+                <Description />
+                <Mail />
+                <Contacts />
+                </>}
+            />}
         </Routes>
     );
 };

@@ -1,10 +1,19 @@
 import React from 'react';
+import {Col, Container, Row} from "react-bootstrap";
+import GenreBar from "../components/GenreBar";
 
 const Shop = () => {
     return (
-        <div>
+        <Container>
+            <Row>
+                <Col md={3}>
+                    <GenreBar/>
+                </Col>
+                <Col md={9}>
 
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

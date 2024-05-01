@@ -1,0 +1,77 @@
+.auth__login__page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.auth__form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.auth__register__form__input {
+    font-family:  "Montserrat", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 200px;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.auth__form .auth__registration__message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.auth__form .auth__registration__message a {
+    color: #6253e1;
+    text-decoration: none;
+}
+
+.auth__button {
+    text-align: center;
+}
+
+.auth__register__form__button-hover {
+    font-family: "Montserrat", sans-serif;
+    width: 200px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.auth__register__form__button-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.auth__register__form__button-hover:focus {
+    outline: none;
+}
+
+.auth__register__form__button-hover.auth__register__form__button-color-7 {
+    background-image: linear-gradient(to right, #6253e1, #a826b9, #A3A1FF, #b345f2);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}

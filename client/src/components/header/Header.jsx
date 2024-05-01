@@ -2,8 +2,9 @@ import React, {useContext} from 'react';
 import './Header.css'
 import {NavLink} from "react-router-dom";
 import {Context} from "../../index";
+import {observer} from "mobx-react-lite";
 
-const Header = () => {
+const Header = observer(() => {
     const {user} = useContext(Context)
     return (
         <header className="header__container" id="header">
@@ -28,15 +29,15 @@ const Header = () => {
                     <h1 className="header__text-title">VBOOK</h1>
                     <p className="header__text-paragraph">Смотри книги в любое время в любом месте!</p>
                     {user.isAuth ?  <div className="header__button">
-                        <button className="header__button-hover header__button-color-7">Войти</button>
+                        <button className="header__button-hover header__button-color-7" onClick={() => user.setIsAuth(false)}>Войти</button>
                     </div> :
                     <div className="header__button">
-                        <button className="header__button-hover header__button-color-7">Зарегистрироваться</button>
+                        <button className="header__button-hover header__button-color-7" onClick={() => user.setIsAuth(true)}>Зарегистрироваться</button>
                     </div>}
                 </div>
             </div>
         </header>
     );
-};
+});
 
 export default Header;
