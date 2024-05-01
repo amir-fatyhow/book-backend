@@ -1,0 +1,134 @@
+.header__container {
+    position: relative;
+    z-index: 1;
+    height: 99.5vh;
+}
+
+.header__background__wrapper {
+    height: 100%;
+    width: 100%;
+    background: #000;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.header__background__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    opacity: 0.6;
+}
+
+.header__navbar__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo__wrapper {
+    width: 90vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__vbook__image {
+    display: block;
+    width: 100px;
+}
+
+.header__navbar {
+    display: flex;
+    gap: 18px;
+    justify-content: flex-end;
+}
+
+.header__navbar__link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    height: 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+
+    margin-top: 20px;
+}
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    height: 70vh;
+}
+
+.header__text-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 90px;
+
+    color: white;
+}
+
+.header__text-paragraph {
+    color: white;
+    font-size: 27px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.header__button {
+    text-align: center;
+}
+
+.header__button-hover {
+    font-family: "Montserrat", sans-serif;
+    width: 200px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.header__button-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.header__button-hover:focus {
+    outline: none;
+}
+
+.header__button-hover.header__button-color-7 {
+    background-image: linear-gradient(to right, #6253e1, #a826b9, #A3A1FF, #b345f2);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}

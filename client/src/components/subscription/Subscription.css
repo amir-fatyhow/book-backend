@@ -1,0 +1,81 @@
+.subscription__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.subscription__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+}
+
+.subscription__paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+
+    line-height: 2.2;
+}
+
+.subscription__form__field {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    width: 360px;
+    background: #fff;
+    color: black;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+    border: 1px solid lightgray;
+    outline: 0;
+    padding: 22px 18px;
+}
+
+.subscription__button {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.subscription__button-hover {
+    font-family: "Montserrat", sans-serif;
+    width: 200px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    height: 60px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.subscription__button-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.subscription__button-hover:focus {
+    outline: none;
+}
+
+.subscription__button-hover.subscription__button-color-7 {
+    background-image: linear-gradient(to right, #6253e1, #a826b9, #A3A1FF, #b345f2);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}

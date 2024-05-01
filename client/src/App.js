@@ -1,22 +1,24 @@
 import './App.css';
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
+import Header from "./components/header/Header";
+import Genres from "./components/genres/Genres";
+import Recommendations from "./components/recommendations/Recommendations";
+import Description from "./components/description/Description";
+import Mail from "./components/subscription/Subscription";
+import Contacts from "./components/contacts/Contacts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Header />
+        <Genres />
+        <Recommendations />
+        <Description />
+        <Mail />
+        <Contacts />
+        <AppRouter />
+    </BrowserRouter>
   );
 }
 
