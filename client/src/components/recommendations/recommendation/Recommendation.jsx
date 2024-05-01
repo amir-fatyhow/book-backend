@@ -12,7 +12,7 @@ const Recommendation = ({imgUrl, author, book, text, price}) => {
                     </video>
                 </div>
             </div>
-            {/*<p className="recommendation__author">{author}</p>*/}
+
             <p className="recommendation__book">"{book}"</p>
             <NavLink to="/shop"><button className="recommendation__button-hover recommendation__button-color-7">Купить</button></NavLink>
         </div>
