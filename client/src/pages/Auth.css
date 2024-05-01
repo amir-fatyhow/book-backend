@@ -1,8 +1,48 @@
 .auth__login__page {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.auth__background__wrapper {
+    height: 100%;
+    width: 100%;
+    background: #000;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.auth__background__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    opacity: 0.4;
+}
+
+.myVideo {
+    position: fixed;
+    left: 10vw;
+    bottom: 10vh;
+    width: 20vw;
+    opacity: 0.8;
+
+    border-radius: 10px;
+
+    transform-style: preserve-3d;
+}
+
 .auth__form {
     position: relative;
     z-index: 1;

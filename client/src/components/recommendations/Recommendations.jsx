@@ -11,8 +11,8 @@ const Recommendations = () => {
                 <li className="recommendations__list__item">
                     <Recommendation
                         imgUrl={"amphibian-man"}
-                        author={"А. Беляев"}
-                        book={"Человек-амфибия"}
+                        author={"А.С. Пушкин"}
+                        book={"Евгений Онегин"}
                         text={"\"Человек-амфибия\" - один из самых известных романов основоположника " +
                             "российской научной фантастики Александра Беляева. " +
                             "Увлекательная и драматичная история Ихтиандра - юноши, " +
@@ -20,7 +20,7 @@ const Recommendations = () => {
                         price={199}
                     />
                 </li>
-                <li className="recommendations__list__item">
+                {/*<li className="recommendations__list__item">
                     <Recommendation
                         imgUrl={"under-the-dome"}
                         author={"Стивен Кинг"}
@@ -59,7 +59,7 @@ const Recommendations = () => {
                             "а родное поместье разграбили янки."}
                         price={199}
                     />
-                </li>
+                </li>*/}
             </ul>
         </div>
     );

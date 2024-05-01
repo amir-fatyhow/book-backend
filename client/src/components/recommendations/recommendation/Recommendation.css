@@ -7,45 +7,60 @@
 
 .recommendation__author {
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
+    font-size: 28px;
 }
 
 .recommendation__book {
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
+    font-size: 28px;
 }
 
-.recommendation__button {
+
+.recommendation__button-hover {
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    width: 200px;
     font-style: normal;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 14px;
 
-    color: white;
-    text-decoration: none;
-    padding: 1.2em 2.8em calc(.8em + 4px);
-    border: none;
-    border-radius: 3px;
-    background: rgb(19, 19, 19);
-    box-shadow: 0 -3px rgb(19, 19, 19) inset;
-    transition: 0.2s;
-}
+    margin-top: 15px;
 
-.recommendation__button:hover {
+    color: #fff;
     cursor: pointer;
-    background: rgb(19, 19, 19);
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
-.recommendation__button:active {
-    background: rgb(19, 19, 19);
-    box-shadow: 0 3px rgb(19, 19, 19) inset;
+.recommendation__button-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.recommendation__button-hover:focus {
+    outline: none;
+}
+
+.recommendation__button-hover.recommendation__button-color-7 {
+    background-image: linear-gradient(to right, #6253e1, #a826b9, #A3A1FF, #b345f2);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
 
 .recommendation__flip__card__container {
-    width: 270px;
-    height: 360px;
+    width: 40vw;
 
     perspective: 1000px;
 }
@@ -59,73 +74,19 @@
     transition: .6s .1s;
 }
 
-.recommendation__flip__card__container:hover .recommendation__flip__card,
-.recommendation__flip__card__container:focus-within .recommendation__flip__card {
-    transform: rotateY(180deg);
-}
+.recommendation__back__side__cmyVideo {
+    width: 40vw;
+    opacity: 0.8;
 
-.recommendation__card__front,
-.recommendation__card__back {
-    width: 100%;
-    height: 100%;
-    border-radius: 2px;
+    border-radius: 10px;
 
-    background: #25022a;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-
-    backface-visibility: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.recommendation__card__front {
-    transform: rotateY(4deg);
-    z-index: 2;
-}
-
-.recommendation__card__back {
-    display: flex;
-    align-items: start;
-    background-color: white;
-    transform: rotateY(180deg);
-    z-index: 1;
-}
-
-.recommendation__back__side__text {
-    color: black;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.8;
-    text-align: justify;
+    transform-style: preserve-3d;
+    margin-bottom: 15px;
 }
 
 .recommendation__card__front__wrapper {
     z-index: -1;
 }
 
-.recommendation__card__front__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-}
-
-.recommendation__card__front__image {
-    height: 100%;
-    border-radius: 2px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 

@@ -7,25 +7,15 @@ const Recommendation = ({imgUrl, author, book, text, price}) => {
         <div className="recommendation__wrapper">
             <div className="recommendation__flip__card__container">
                 <div className="recommendation__flip__card">
-                    <div className="recommendation__card__front">
-                        <div className="recommendation__card__front__wrapper">
-                            <img
-                                className="recommendation__card__front__image"
-                                src={require(`../../../assets/books/${imgUrl}.jpg`)}
-                                alt={book}/>
-                        </div>
-                    </div>
-                    <div className="recommendation__card__back">
-                        <div className="recommendation__back__side__content">
-                            <p className="recommendation__back__side__text">{text}</p>
-                        </div>
-                    </div>
+                    <video autoPlay muted loop poster="../assets/poster/poster_eguene_onegin.jpg" className="recommendation__back__side__cmyVideo">
+                        <source src={require("../../../assets/video/eguene_onegin_60s_logo.mp4")} type="video/mp4"/>
+                    </video>
                 </div>
             </div>
-            <p className="recommendation__author">{author}</p>
+            {/*<p className="recommendation__author">{author}</p>*/}
             <p className="recommendation__book">"{book}"</p>
-            <p className="recommendation__price">{price} &#x20bd;</p>
-            <NavLink to="/shop"><button className="recommendation__button">Купить</button></NavLink>
+            {/*<p className="recommendation__price">{price} &#x20bd;</p>*/}
+            <NavLink to="/shop"><button className="recommendation__button-hover recommendation__button-color-7">Купить</button></NavLink>
         </div>
     );
 };

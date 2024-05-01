@@ -5,9 +5,14 @@ import {NavLink, useLocation} from "react-router-dom";
 const Auth = () => {
     const location = useLocation()
     const isLogin = location.pathname === "/login"
-    console.log(isLogin)
     return (
         <div className="auth__login__page">
+            <div className="auth__background__wrapper">
+                <img className="auth__background__image" src={require("../assets/background/auth_background.png")} alt="books"/>
+            </div>
+            <video autoPlay muted loop poster="../assets/poster/poster_eguene_onegin.jpg" className="myVideo">
+                <source src={require("../assets/video/eguene_onegin_60s_logo.mp4")} type="video/mp4"/>
+            </video>
             <div className="auth__form">
                 {!isLogin && <form className="auth__register__form">
                     <input className="auth__register__form__input" type="text" placeholder="имя"/>
