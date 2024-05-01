@@ -14,7 +14,6 @@ const Recommendation = ({imgUrl, author, book, text, price}) => {
             </div>
             {/*<p className="recommendation__author">{author}</p>*/}
             <p className="recommendation__book">"{book}"</p>
-            {/*<p className="recommendation__price">{price} &#x20bd;</p>*/}
             <NavLink to="/shop"><button className="recommendation__button-hover recommendation__button-color-7">Купить</button></NavLink>
         </div>
     );
