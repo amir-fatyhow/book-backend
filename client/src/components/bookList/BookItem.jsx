@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col} from "react-bootstrap";
+import {Col, Image} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import "./BookItem.css"
 
@@ -11,9 +11,9 @@ const BookItem = ({book}) => {
                     <div className="bookItem__flip__card">
                         <div className="bookItem__card__front">
                             <div className="bookItem__card__front__wrapper">
-                                <img
+                                <Image
                                     className="bookItem__card__front__image"
-                                    src={require(`../../assets/books/the-little-prince.jpg`)}
+                                    src={"http://localhost:5000/" + `${book.image}`}
                                     alt={book}/>
                             </div>
                         </div>

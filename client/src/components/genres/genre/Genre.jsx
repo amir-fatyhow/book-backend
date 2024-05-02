@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const Genre = ({title, imgUrl}) => {
     return (
         <div className="genre__card">
-            <NavLink to="/shop">
+            <NavLink to="/registration">
                 <h2 className="genre__card__title">{title}</h2>
                 <div className="genre__card__image__wrapper">
                     <div className="genre__image__blur__effect"></div>

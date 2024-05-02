@@ -3,8 +3,8 @@ const bcrypt = require("bcrypt")
 const jsw = require("jsonwebtoken")
 const {User, Basket} = require("../models/models")
 
-const generateJwt = (id, email, role) => {
-    return jsw.sign({id, email, role}, "secret_key", {expiresIn: "24h"})
+const generateJwt = (id, email) => {
+    return jsw.sign({id, email}, "secret_key", {expiresIn: "24h"}, [])
 }
 
 class UserController {
@@ -13,14 +13,19 @@ class UserController {
         if(!email || !password) {
             return next(ApiError.badRequest("Incorrect email or password"))
         }
-        const candidate = await User.findOne({where: {email}})
+        const candidate = await User.findOne({
+            where: {
+                email: email
+            }
+        })
         if (candidate) {
             return next(ApiError.badRequest("User with this email already exists"))
         }
         const hashPassword = await bcrypt.hash(password, 5)
         const user = await User.create({email, role, password: hashPassword})
+
         const basket = await Basket.create({userId: user.id})
-        const token = generateJwt(user.id, user.email, user.role)
+        const token = await generateJwt(user.id, user.email)
         return res.json({token})
     }
 
@@ -34,12 +39,12 @@ class UserController {
         if (!comparePassword) {
             return next(ApiError.internal("password is incorrect"))
         }
-        const token = generateJwt(user.id, user.email, user.role)
+        const token = generateJwt(user.id, user.email)
         return res.json({token})
     }
 
     async check(req, res, next) {
-        const token = generateJwt(req.user.id, req.user.email, req.user.role)
+        const token = generateJwt(req.user.id, req.user.email)
         return res.json({token})
     }
 

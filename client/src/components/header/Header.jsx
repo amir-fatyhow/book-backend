@@ -13,7 +13,7 @@ const Header = observer(() => {
             </div>
             <div className="header__navbar__wrapper">
                 <div className="header__logo__wrapper">
-                    <NavLink to="/shop" className="header__vbook">
+                    <NavLink to="/registration" className="header__vbook">
                         <a>
                             <img className="header__vbook__image" src={require("../../assets/logo/vbook.png")} alt="vbook"/>
                         </a>
@@ -29,7 +29,7 @@ const Header = observer(() => {
                     <h1 className="header__text-title">VBOOK</h1>
                     <p className="header__text-paragraph">Смотри книги в любое время в любом месте!</p>
                     <NavLink to="/registration">
-                        <button className="header__button-hover header__button-color-7" onClick={() => user.setIsAuth(true)}>Зарегистрироваться</button>
+                        <button className="header__button-hover header__button-color-7">Зарегистрироваться</button>
                     </NavLink>
                 </div>
             </div>

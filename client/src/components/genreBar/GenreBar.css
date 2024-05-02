@@ -5,8 +5,12 @@
     flex-direction: column;
 }
 
-.genreBar__icon {
+.genreBar__icon, .genreBar__icon_logout {
     width: 20px;
+}
+
+.genreBar__NavLink {
+    text-decoration: none;
 }
 
 .genreBar__listItem {
@@ -22,7 +26,17 @@
     border-radius: 3px;
 
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+
+    text-underline: none;
 }
+
+.genreBar__listItem__logout__basket {
+    margin-top: 40px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
 .genreBar__listItem-active {
     background-image: linear-gradient(to right, #6253e1,  #b345f2);
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
@@ -36,6 +50,20 @@
     font-style: normal;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.genreBar__logout {
+    color: #b345f2;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    border: none;
+    padding: 0;
+    background: transparent;
+    text-underline: none;
 }
 
 .genreBar__name-active {

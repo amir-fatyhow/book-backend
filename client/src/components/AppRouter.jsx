@@ -10,12 +10,14 @@ import Recommendations from "./recommendations/Recommendations";
 import Description from "./description/Description";
 import Mail from "./subscription/Subscription";
 import Contacts from "./contacts/Contacts";
+import {observer} from "mobx-react-lite";
 
-const AppRouter = () => {
+const AppRouter = observer(() => {
     const {user} = useContext(Context)
+    console.log(user.isAuth)
     return (
         <Routes>
-            {!user.isAuth && <Route path="/shop" element={<Shop/>}/>}
+            {user.isAuth && <Route path="/shop" element={<Shop/>}/>}
             {!user.isAuth && <Route path="/login" element={<Auth/>}/>}
             {!user.isAuth && <Route path="/registration" element={<Auth/>}/>}
             {user.isAuth && <Route path="/basket" element={<Basket/>}/>}
@@ -32,6 +34,6 @@ const AppRouter = () => {
             />}
         </Routes>
     );
-};
+});
 
 export default AppRouter;

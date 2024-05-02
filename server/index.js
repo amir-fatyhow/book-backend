@@ -33,12 +33,12 @@ userRouter.post("/login", userController.login)
 userRouter.get("/auth", authMiddleware, userController.check)
 
 // book
-bookRouter.post("/", checkRole("ADMIN"), bookController.create)
+//bookRouter.post("/", checkRole("ADMIN"), bookController.create)
 bookRouter.get("/", bookController.getAll)
 bookRouter.get("/:id", bookController.getById)
 
 // genre
-genreRouter.post("/", checkRole("ADMIN"), genreController.create)
+//genreRouter.post("/", checkRole("ADMIN"), genreController.create)
 genreRouter.get("/", genreController.getAll)
 
 app.use("/api/user", userRouter)
