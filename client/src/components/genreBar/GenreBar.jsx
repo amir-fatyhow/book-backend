@@ -11,6 +11,7 @@ const GenreBar = observer(() => {
     const logout = () => {
         user.setUser({})
         user.setIsAuth(false)
+        localStorage.setItem('isAuth', "false")
     }
     return (
         <div className="genreBar__container">

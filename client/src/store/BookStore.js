@@ -1,10 +1,11 @@
 import {makeAutoObservable} from "mobx";
+import {DEFAULT_GENRE_SELECTED} from "../consts";
 
 export default class BookStore {
     constructor() {
         this._genre = []
         this._books = []
-        this._selectedGenre = {}
+        this._selectedGenre = DEFAULT_GENRE_SELECTED
         makeAutoObservable(this)
     }
 

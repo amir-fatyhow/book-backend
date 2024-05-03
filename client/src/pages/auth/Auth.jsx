@@ -2,9 +2,9 @@ import React, {useContext, useState} from 'react';
 import "./Auth.css"
 import {NavLink, useLocation} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import {login, registration} from "../http/userApi";
+import {login, registration} from "../../http/userApi";
 import {observer} from "mobx-react-lite";
-import {Context} from "../index";
+import {Context} from "../../index";
 
 const Auth = observer(() => {
     const {user} = useContext(Context)
@@ -41,11 +41,8 @@ const Auth = observer(() => {
     return (
         <div className="auth__login__page">
             <div className="auth__background__wrapper">
-                <img className="auth__background__image" src={require("../assets/background/auth_background.png")} alt="books"/>
+                <img className="auth__background__image" src={require("../../assets/background/auth_background.png")} alt="books"/>
             </div>
-            <video autoPlay muted loop poster="../assets/poster/poster_eguene_onegin.jpg" className="myVideo">
-                <source src={require("../assets/video/eguene_onegin_60s_logo.mp4")} type="video/mp4"/>
-            </video>
             <div className="auth__form">
                 {!isLogin && <form className="auth__register__form">
                     <input

@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import {Routes, Route} from "react-router-dom";
-import Shop from "../pages/Shop";
-import Auth from "../pages/Auth";
-import Basket from "../pages/Basket";
+import Shop from "../pages/shop/Shop";
+import Auth from "../pages/auth/Auth";
+import Basket from "../pages/basket/Basket";
 import {Context} from "../index";
 import Header from "./header/Header";
 import Genres from "./genres/Genres";
@@ -14,7 +14,7 @@ import {observer} from "mobx-react-lite";
 
 const AppRouter = observer(() => {
     const {user} = useContext(Context)
-    console.log(user.isAuth)
+    let isAuth = localStorage.isAuth
     return (
         <Routes>
             {user.isAuth && <Route path="/shop" element={<Shop/>}/>}
