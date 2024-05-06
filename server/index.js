@@ -3,7 +3,7 @@ const express = require('express')
 const sequelize = require("./db")
 const PORT = 5000
 const models = require("./models/models")
-const data = require("./models/data")
+//const data = require("./models/data")
 
 const userRouter = express.Router()
 const bookRouter = express.Router()

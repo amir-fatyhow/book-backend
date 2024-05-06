@@ -80,12 +80,10 @@
     width: 40vw;
     opacity: 0.8;
 
-    border-radius: 10px;
+    border-radius: 0;
 
     transform-style: preserve-3d;
     margin-bottom: 15px;
-
-    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2), 0 18px 18px 0 rgba(0, 0, 0, 0.24);
 }
 
 .recommendation__card__front__wrapper {
