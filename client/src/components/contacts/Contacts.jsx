@@ -1,6 +1,5 @@
 import React from 'react';
 import './Contacts.css'
-import {Link} from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 
 const Contacts = () => {

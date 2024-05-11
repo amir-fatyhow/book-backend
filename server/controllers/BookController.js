@@ -1,7 +1,7 @@
 const uuid = require("uuid")
 const path = require("path")
 const {Book} = require("../models/models")
-const ApiError = require("../error/ApiError")
+const ApiError = require("../error/APIError")
 
 class BookController {
     async create(req, res, next) {

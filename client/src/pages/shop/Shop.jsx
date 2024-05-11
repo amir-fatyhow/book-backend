@@ -6,7 +6,7 @@ import "./Shop.css"
 import ScrollToTop from "react-scroll-to-top";
 import {observer} from "mobx-react-lite";
 import {Context} from "../../index";
-import {fetchBooks, fetchGenres} from "../../http/bookApi";
+import {fetchBooks, fetchGenres} from "../../http/bookAPI";
 
 const Shop = observer(() => {
     const {book} = useContext(Context)

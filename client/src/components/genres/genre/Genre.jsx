@@ -8,7 +8,7 @@ const Genre = ({title, imgUrl}) => {
             <NavLink to="/registration">
                 <h2 className="genre__card__title">{title}</h2>
                 <div className="genre__card__image__wrapper">
-                    <div className="genre__image__blur__effect"></div>
+                    <div className="genre__image__blur-effect"></div>
                     <img className="genre__image" src={require(`../../../assets/genres/${imgUrl}.jpg`)} alt={title}/>
                 </div>
             </NavLink>

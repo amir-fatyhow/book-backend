@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import "./Auth.css"
 import {NavLink, useLocation} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import {login, registration} from "../../http/userApi";
+import {login, registration} from "../../http/userAPI";
 import {observer} from "mobx-react-lite";
 import {Context} from "../../index";
 

@@ -14,7 +14,6 @@ import {observer} from "mobx-react-lite";
 
 const AppRouter = observer(() => {
     const {user} = useContext(Context)
-    let isAuth = localStorage.isAuth
     return (
         <Routes>
             {user.isAuth && <Route path="/shop" element={<Shop/>}/>}

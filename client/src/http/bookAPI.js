@@ -1,5 +1,4 @@
 import {$host} from "./index";
-import {PAGE_LIMIT} from "../consts";
 
 export const fetchGenres = async () => {
     const {data} = await $host.get("api/genre")
